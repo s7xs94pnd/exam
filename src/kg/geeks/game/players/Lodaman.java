@@ -16,13 +16,13 @@ public class Lodaman extends Hero{
         int fstBone=RPG_Game.random.nextInt(6)+1;
         int secBone=RPG_Game.random.nextInt(6)+1;
      if (fstBone==secBone){
-         boss.setHealth(boss.getHealth()-(fstBone+secBone));
+         boss.setHealth(boss.getHealth()-(fstBone*secBone));
          System.out.println("-----------------LODAMAN------------------ boss get damage ");
      }
      else {
          int randomMate=RPG_Game.random.nextInt(heroes.length);
-         heroes[randomMate].setHealth(getDamage()-(secBone+fstBone));
-         System.out.println("----------------------------------"+heroes[randomMate].getName()+" GEt damdge from lodaman "+(fstBone+secBone)+" points---------------------------------");
+         heroes[randomMate].setHealth(getDamage()-(secBone*fstBone));
+         System.out.println("----------------------------------"+heroes[randomMate].getName()+" GEt damdge from lodaman "+(fstBone*secBone)+" points---------------------------------");
              }
          }
 
